@@ -12,8 +12,8 @@
 <body>
 
     <!-- Pannello Laterale -->
-    <div id="side-panel" class="side-panel">
-        <button id="close-side-panel" class="close-side-panel">&times;</button>
+    <div id="side-panel" class="side-panel" aria-hidden="true">
+        <button id="close-side-panel" class="close-side-panel" aria-label="Chiudi Pannello">&times;</button>
         <nav class="side-nav">
             <a href="index.html" class="side-link">Home</a>
             <a href="collection.html" class="side-link">Collezione</a>
@@ -22,7 +22,7 @@
         </nav>
     </div>
 
-    <button id="open-side-panel" class="open-side-panel">&#9776;</button>
+    <button id="open-side-panel" class="open-side-panel" aria-label="Apri Pannello">&#9776;</button>
 
     <!-- Header con Logo e Titolo -->
     <header>
@@ -30,34 +30,38 @@
         <h1>Collezione di Carte</h1>
     </header>
 
-    <!-- Barra delle Statistiche -->
-    <div class="stats-bar">
-        <p><strong>Packs Aperti:</strong> <span id="packs-opened">0</span></p>
-        <p><strong>Carte Trovate:</strong></p>
-        <ul>
-            <li>Common: <span id="common-count">0</span></li>
-            <li>Rare: <span id="rare-count">0</span></li>
-            <li>Epic: <span id="epic-count">0</span></li>
-            <li>Legendary: <span id="legendary-count">0</span></li>
-        </ul>
+    <!-- Indicatore di Caricamento -->
+    <div id="loading-indicator" class="loading-indicator">
+        <p>Caricamento in corso...</p>
     </div>
 
     <!-- Sezione Principale -->
     <main>
         <div class="central-container">
-            <div id="pack" class="pack">
+            <div id="pack" class="pack" aria-hidden="true">
                 <img src="img/back.png" alt="Pacchetto di Carte" class="pack-img">
             </div>
             <div class="buttons-container">
-                <button id="open-pack-btn" class="btn">Apri Pacchetto</button>
+                <button id="open-pack-btn" class="btn" disabled style="opacity: 0.5;">Apri Pacchetto</button>
                 <button id="go-to-collection-btn" class="btn">Vai alla Collezione</button>
             </div>
-            <div id="cards-container" class="cards-container">
+            <!-- Barra delle Statistiche -->
+            <div class="stats-bar">
+                <p><strong>Packs Aperti:</strong> <span id="packs-opened">0</span></p>
+                <p><strong>Carte Trovate:</strong></p>
+                <ul>
+                    <li>Common: <span id="common-count">0</span></li>
+                    <li>Rare: <span id="rare-count">0</span></li>
+                    <li>Epic: <span id="epic-count">0</span></li>
+                    <li>Legendary: <span id="legendary-count">0</span></li>
+                </ul>
+            </div>
+            <div id="cards-container" class="cards-container" aria-live="polite">
                 <!-- Le carte saranno inserite dinamicamente qui -->
             </div>
-            <div id="recap-modal" class="recap-modal">
+            <div id="recap-modal" class="recap-modal" aria-hidden="true">
                 <div class="recap-content">
-                    <span class="close-btn">&times;</span>
+                    <span class="close-btn" aria-label="Chiudi Riepilogo">&times;</span>
                     <h2>Riepilogo del Pacchetto</h2>
                     <div id="recap-details" class="recap-details">
                         <!-- Dettagli delle carte trovate -->
@@ -78,9 +82,9 @@
     </footer>
 
     <!-- Modal per dettagli della carta -->
-    <div id="card-modal" class="card-modal">
+    <div id="card-modal" class="card-modal" aria-hidden="true">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
+            <span class="close-btn" aria-label="Chiudi Dettagli Carta">&times;</span>
             <img id="modal-img" src="" alt="Carta">
             <h2 id="modal-title"></h2>
             <!-- Altri dettagli possono essere aggiunti qui -->
@@ -88,8 +92,8 @@
     </div>
 
     <!-- Suoni (opzionale) -->
-    <audio id="flip-sound" src="sounds/flip.mp3"></audio>
-    <audio id="open-pack-sound" src="sounds/open-pack.mp3"></audio>
+    <audio id="flip-sound" src="sounds/flip.mp3" preload="auto"></audio>
+    <audio id="open-pack-sound" src="sounds/open-pack.mp3" preload="auto"></audio>
 
     <script src="script.js"></script>
 </body>

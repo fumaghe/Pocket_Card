@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openSidePanelBtn = document.getElementById('open-side-panel');
     const closeSidePanelBtn = document.getElementById('close-side-panel');
     const sidePanel = document.getElementById('side-panel');
+    const loadingIndicator = document.getElementById('loading-indicator');
 
     let packsOpened = 0;
     let cardCounts = {
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsData = [];
     let selectedCards = [];
     let currentCardIndex = 0;
-    let cardsClicked = 0; // Nuova variabile per tracciare le carte cliccate
+    let cardsClicked = 0; // Variabile per tracciare le carte cliccate
 
     // Suoni (opzionale)
     const flipSound = document.getElementById('flip-sound');
@@ -82,7 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('collection', JSON.stringify(collection));
     }
 
-    // Carica il JSON delle carte
+    // Funzione per pre-caricare tutte le immagini
+    function preloadImages(imageUrls) {
+        return Promise.all(imageUrls.map(url => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = url;
+                img.onload = resolve;
+                img.onerror = () => {
+                    console.error(`Errore nel caricamento dell'immagine: ${url}`);
+                    resolve(); // Risolvi comunque per non bloccare
+                };
+            });
+        }));
+    }
+
+    // Carica il JSON delle carte e pre-carica tutte le immagini
     fetch('cards.json')
         .then(response => {
             if (!response.ok) {
@@ -93,9 +109,36 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             cardsData = data;
             loadStats();
+
+            // Estrai tutte le URL delle immagini delle carte
+            const cardImageUrls = cardsData.map(card => card.image_url);
+
+            // Aggiungi le immagini statiche del sito
+            const staticImageUrls = [
+                'img/logo.png',
+                'img/back.png',
+                // Aggiungi qui altre immagini statiche se necessario
+            ];
+
+            const allImageUrls = [...cardImageUrls, ...staticImageUrls];
+
+            // Mostra l'indicatore di caricamento
+            loadingIndicator.classList.add('active');
+
+            // Pre-carica tutte le immagini
+            return preloadImages(allImageUrls);
+        })
+        .then(() => {
+            console.log('Tutte le immagini sono state pre-caricate.');
+            // Nascondi l'indicatore di caricamento
+            loadingIndicator.classList.remove('active');
+            // Abilita il pulsante "Apri Pacchetto" dopo il pre-caricamento
+            openPackBtn.disabled = false;
+            openPackBtn.style.opacity = '1';
         })
         .catch(error => {
-            console.error('Errore:', error);
+            console.error('Errore durante il pre-caricamento delle immagini:', error);
+            loadingIndicator.classList.remove('active');
             cardsContainer.innerHTML = '<p>Impossibile caricare le carte. Riprova più tardi.</p>';
         });
 
@@ -244,9 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funzione per mostrare il pacchetto con animazione
     function showPackAnimation(callback) {
         pack.classList.add('show');
-        // Dopo l'animazione, mostra le carte
+        // Dopo l'animazione, chiama il callback e rimuove la classe 'show'
         pack.addEventListener('transitionend', () => {
             callback();
+            pack.classList.remove('show'); // Rimuove la classe per permettere riaperture future
         }, { once: true });
     }
 
@@ -273,11 +317,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const img = document.createElement('img');
             img.src = card.image_url;
-            img.alt = card["Nome Carta"];
 
             const info = document.createElement('div');
             info.classList.add('card-info');
-            ;
 
             recapCard.appendChild(img);
             recapCard.appendChild(info);
@@ -285,10 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Mostra il recap modal con animazione di dissolvenza
-        recapModal.style.display = 'flex';
-        setTimeout(() => {
-            recapModal.classList.add('active');
-        }, 100);
+        recapModal.classList.add('active');
     }
 
     // Modal functions
@@ -296,11 +335,11 @@ document.addEventListener('DOMContentLoaded', () => {
         modalImg.src = card.image_url;
         modalImg.alt = card["Nome Carta"];
         modalTitle.textContent = card["Nome Carta"];
-        modal.style.display = 'flex'; // Cambiato da 'block' a 'flex' per centratura
+        modal.classList.add('active'); // Usare la classe active per mostrare il modal
     }
 
     function hideModal() {
-        modal.style.display = 'none';
+        modal.classList.remove('active');
     }
 
     // Event Listener per chiudere il modal
@@ -318,18 +357,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Listener per chiudere il recap modal
     closeRecapBtn.addEventListener('click', () => {
         recapModal.classList.remove('active');
-        setTimeout(() => {
-            recapModal.style.display = 'none';
-        }, 500);
+        // Svuota il contenitore delle carte del recap per prepararsi al prossimo pacchetto
+        recapDetails.innerHTML = '';
     });
 
     // Chiudi il recap cliccando fuori dal contenuto
     window.addEventListener('click', (event) => {
         if (event.target == recapModal) {
             recapModal.classList.remove('active');
-            setTimeout(() => {
-                recapModal.style.display = 'none';
-            }, 500);
+            // Svuota il contenitore delle carte del recap per prepararsi al prossimo pacchetto
+            recapDetails.innerHTML = '';
         }
     });
 
@@ -345,6 +382,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Incrementa il contatore dei pacchetti
         incrementPackCounter();
+        // Svuota il contenitore delle carte precedenti
+        cardsContainer.innerHTML = '';
         // Avvia l'animazione di apertura del pacchetto
         showPackAnimation(() => {
             // Seleziona le carte
@@ -363,10 +402,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener per aprire il pannello laterale
     openSidePanelBtn.addEventListener('click', () => {
         sidePanel.style.width = '250px';
+        sidePanel.setAttribute('aria-hidden', 'false');
     });
 
     // Event listener per chiudere il pannello laterale
     closeSidePanelBtn.addEventListener('click', () => {
         sidePanel.style.width = '0';
+        sidePanel.setAttribute('aria-hidden', 'true');
     });
 });
