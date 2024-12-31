@@ -1,0 +1,96 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collezione di Carte</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pannello Laterale -->
+    <div id="side-panel" class="side-panel">
+        <button id="close-side-panel" class="close-side-panel">&times;</button>
+        <nav class="side-nav">
+            <a href="index.html" class="side-link">Home</a>
+            <a href="collection.html" class="side-link">Collezione</a>
+            <a href="#" class="side-link">Statistiche</a>
+            <a href="#" class="side-link">Pacchetti</a>
+        </nav>
+    </div>
+
+    <button id="open-side-panel" class="open-side-panel">&#9776;</button>
+
+    <!-- Header con Logo e Titolo -->
+    <header>
+        <img src="img/logo.png" alt="Logo Collezione" class="logo">
+        <h1>Collezione di Carte</h1>
+    </header>
+
+    <!-- Barra delle Statistiche -->
+    <div class="stats-bar">
+        <p><strong>Packs Aperti:</strong> <span id="packs-opened">0</span></p>
+        <p><strong>Carte Trovate:</strong></p>
+        <ul>
+            <li>Common: <span id="common-count">0</span></li>
+            <li>Rare: <span id="rare-count">0</span></li>
+            <li>Epic: <span id="epic-count">0</span></li>
+            <li>Legendary: <span id="legendary-count">0</span></li>
+        </ul>
+    </div>
+
+    <!-- Sezione Principale -->
+    <main>
+        <div class="central-container">
+            <div id="pack" class="pack">
+                <img src="img/back.png" alt="Pacchetto di Carte" class="pack-img">
+            </div>
+            <div class="buttons-container">
+                <button id="open-pack-btn" class="btn">Apri Pacchetto</button>
+                <button id="go-to-collection-btn" class="btn">Vai alla Collezione</button>
+            </div>
+            <div id="cards-container" class="cards-container">
+                <!-- Le carte saranno inserite dinamicamente qui -->
+            </div>
+            <div id="recap-modal" class="recap-modal">
+                <div class="recap-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Riepilogo del Pacchetto</h2>
+                    <div id="recap-details" class="recap-details">
+                        <!-- Dettagli delle carte trovate -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer con Crediti e Social -->
+    <footer>
+        <p>Creato da [Il Tuo Nome]. Condividi il tuo progresso:</p>
+        <div class="social-buttons">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Modal per dettagli della carta -->
+    <div id="card-modal" class="card-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-img" src="img/back.png" alt="Carta">
+            <h2 id="modal-title"></h2>
+            <!-- Altri dettagli possono essere aggiunti qui -->
+        </div>
+    </div>
+
+    <!-- Suoni (opzionale) -->
+    <audio id="flip-sound" src="sounds/flip.mp3"></audio>
+    <audio id="open-pack-sound" src="sounds/open-pack.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

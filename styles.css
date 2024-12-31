@@ -1,0 +1,697 @@
+/* styles.css */
+
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradienti viola e blu */
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pannello Laterale */
+.side-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background-color: rgba(44, 62, 80, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-panel .close-side-panel {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    cursor: pointer;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.side-link {
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #ecf0f1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.side-link:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+.open-side-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    cursor: pointer;
+    z-index: 21;
+    transition: transform 0.3s ease;
+}
+
+.open-side-panel:hover {
+    transform: rotate(90deg);
+}
+
+/* Header con Logo e Titolo */
+header {
+    width: 100%;
+    background-color: rgba(44, 62, 80, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header h1 {
+    color: #f1c40f; /* Oro per i titoli */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+/* Barra delle Statistiche */
+.stats-bar {
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #ecf0f1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #f1c40f;
+    margin-top: -5px;
+}
+
+.stats-bar p, .stats-bar ul {
+    margin: 5px 0;
+}
+
+.stats-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.stats-bar ul li {
+    font-size: 1em;
+}
+
+.stats-bar ul li span {
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+/* Sezione Principale */
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.central-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+/* Pacchetto di Carte */
+.pack {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform: translateY(100vh) rotateY(0deg);
+    transition: transform 1s ease, opacity 1s ease;
+    cursor: pointer;
+}
+
+.pack.show {
+    transform: translateY(0) rotateY(360deg);
+}
+
+.pack-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Pulsanti Stilizzati */
+.buttons-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #3498db; /* Azzurro chiaro */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+#go-to-collection-btn {
+    background-color: #27ae60; /* Verde */
+}
+
+#go-to-collection-btn:hover {
+    background-color: #1e8449;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1500px; /* Maggiore prospettiva per un effetto 3D più realistico */
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+}
+
+/* Stack di Carte */
+.card {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(0) rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: transform 0.8s, opacity 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+
+.card.show {
+    opacity: 1;
+}
+
+.card.flipped {
+    transform: translateX(-50%) translateY(0) rotateY(180deg);
+    z-index: 2;
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-front img, .card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-back {
+    background-color: #2980b9;
+}
+
+.flash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.flash.active {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.2);
+    animation: flashEffect 1s forwards;
+}
+
+.flash.Common {
+    background-color: rgba(149, 165, 166, 0.6);
+}
+
+.flash.Rare {
+    background-color: rgba(41, 128, 185, 0.6);
+}
+
+.flash.Epic {
+    background-color: rgba(142, 68, 173, 0.6);
+}
+
+.flash.Legendary {
+    background-color: rgba(192, 57, 43, 0.6);
+}
+
+@keyframes flashEffect {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+/* Recap Modal Styles */
+.recap-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 25; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recap-content {
+    background-color: #f1c40f; /* Oro */
+    padding: 20px;
+    border: 2px solid #ecf0f1;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
+
+.recap-content h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.recap-content .recap-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.recap-content .recap-card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #ecf0f1;
+}
+
+.recap-content .recap-card:hover {
+    transform: scale(1.05);
+}
+
+.recap-content .recap-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recap-content .recap-card .card-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(44, 62, 80, 0.8);
+    color: #f1c40f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-size: 1em;
+}
+
+/* Animazioni Recap */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Effetto Glow per la rarità */
+.rarity-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card.flipped .rarity-glow {
+    opacity: 1;
+}
+
+/* Modal Styles */
+.card-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 30; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #f1c40f;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    animation: fadeInModal 0.5s ease;
+}
+
+.modal-content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    color: #f1c40f;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #2c3e50;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Collection Page Styles */
+.collection-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+.collection-container h2 {
+    font-size: 2.5em;
+    color: #f1c40f;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filters label {
+    font-size: 1.2em;
+    color: #ecf0f1;
+}
+
+.filters select {
+    padding: 5px 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.filters select:hover,
+.filters select:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.collection-card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ecf0f1;
+}
+
+.collection-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection-card .count-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(52, 152, 219, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.collection-card.blur {
+    filter: blur(5px);
+    pointer-events: none;
+    position: relative;
+    border: 2px solid #7f8c8d; /* Grigio per le carte non trovate */
+}
+
+.collection-card.blur::after {
+    content: "Non Raggiunta";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Bordo colorato per la rarità */
+.collection-card.Common {
+    border: 3px solid #27ae60; /* Verde */
+}
+
+.collection-card.Rare {
+    border: 3px solid #3498db; /* Blu */
+}
+
+.collection-card.Epic {
+    border: 3px solid #8e44ad; /* Viola */
+}
+
+.collection-card.Legendary {
+    border: 3px solid #f1c40f; /* Oro */
+}
+
+/* Ombra luminosa all'hover */
+.collection-card.hovered {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .collection-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .stats-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .card, .collection-card {
+        width: 120px;
+        height: 180px;
+    }
+
+    .recap-content {
+        width: 90%;
+    }
+
+    .collection-card {
+        height: 180px;
+    }
+
+    header .logo {
+        width: 40px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .stats-bar {
+        padding: 10px;
+    }
+
+    .stats-bar p, .stats-bar ul {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+

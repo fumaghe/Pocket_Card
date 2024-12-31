@@ -1,0 +1,136 @@
+<!-- collection.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collezione di Carte</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pannello Laterale -->
+    <div id="side-panel" class="side-panel">
+        <button id="close-side-panel" class="close-side-panel">&times;</button>
+        <nav class="side-nav">
+            <a href="index.html" class="side-link">Home</a>
+            <a href="collection.html" class="side-link">Collezione</a>
+            <a href="#" class="side-link">Statistiche</a>
+            <a href="#" class="side-link">Pacchetti</a>
+        </nav>
+    </div>
+
+    <button id="open-side-panel" class="open-side-panel">&#9776;</button>
+
+    <!-- Header con Logo e Titolo -->
+    <header>
+        <img src="img/logo.png" alt="Logo Collezione" class="logo">
+        <h1>Collezione di Carte</h1>
+    </header>
+
+    <!-- Barra delle Statistiche -->
+    <div class="stats-bar">
+        <p><strong>Packs Aperti:</strong> <span id="packs-opened">0</span></p>
+        <ul>
+            <li>Common: <span id="common-count">0</span></li>
+            <li>Rare: <span id="rare-count">0</span></li>
+            <li>Epic: <span id="epic-count">0</span></li>
+            <li>Legendary: <span id="legendary-count">0</span></li>
+        </ul>
+        <p><strong>Carte Singole:</strong> <span id="unique-cards">0</span> / <span id="total-cards">0</span></p>
+    </div>
+
+    <!-- Sezione Principale della Collezione -->
+    <main>
+        <div class="collection-container">
+            <h2>La Tua Collezione</h2>
+            <!-- Pulsante "Torna Indietro" -->
+            <button id="back-to-home-btn" class="btn">Torna Indietro</button>
+            
+           
+            <div class="filters">
+                <label for="rarity-filter">Rarità:</label>
+                <select id="rarity-filter">
+                    <option value="All">Tutte</option>
+                    <option value="Common">Common</option>
+                    <option value="Rare">Rare</option>
+                    <option value="Epic">Epic</option>
+                    <option value="Legendary">Legendary</option>
+                </select>
+
+                <label for="type-filter">Tipo:</label>
+                <select id="type-filter">
+                    <option value="All">Tutti</option>
+                    <option value="Cibo">Cibo</option>
+                    <option value="Persona">Persona</option>
+                    <option value="Incantesimo">Incantesimo</option>
+                    <option value="Evento">Evento</option>
+                    <option value="Magia">Magia</option>
+                    <option value="Luogo">Luogo</option>
+                    <!-- Aggiungi altri tipi di carte se necessario -->
+                </select>
+
+                <!-- Nuovo Filtro per Effetto -->
+                <label for="effect-filter">Effetto:</label>
+                <select id="effect-filter">
+                    <option value="All">Tutti</option>
+                    <option value="Bonus">Bonus</option>
+                    <option value="Evoca">Evoca</option>
+                    <option value="Rievoca">Rievoca</option>
+                    <option value="Reset">Reset</option>
+                    <option value="Pesca">Pesca</option>
+                    <option value="Distrugge">Distrugge</option>
+                    <option value="Sposta">Sposta</option>
+                    <option value="Aggiungi Turno">Aggiungi Turno</option>
+                    <option value="Blocco">Blocco</option>
+                    <option value="Aggiungi Mana">Aggiungi Mana</option>
+                    <option value="Vittoria">Vittoria</option>
+                    <option value="Inverti">Inverti</option>
+                    <option value="Protezione">Protezione</option>
+                    <option value="Cambio Luogo">Cambio Luogo</option>
+                    <option value="Malus">Malus</option>
+                    <option value="Mescola">Mescola</option>
+                    <option value="Coperte">Coperte</option>
+                    <option value="Raddoppia">Raddoppia</option>
+                    <option value="Togli effetto">Togli effetto</option>
+                    <option value="Riattiva">Riattiva</option>
+                    <option value="Sconto">Sconto</option>
+                    <!-- Aggiungi altri effetti se necessario -->
+                </select>
+
+                <!-- Ordinamento -->
+                <label for="sort-filter">Ordina per:</label>
+                <select id="sort-filter">
+                    <option value="default">Default</option>
+                    <option value="mana-asc">Mana (Crescente)</option>
+                    <option value="mana-desc">Mana (Decrescente)</option>
+                    <option value="strength-asc">Forza (Crescente)</option>
+                    <option value="strength-desc">Forza (Decrescente)</option>
+                </select>
+
+                <!-- Filtro Mostra Solo Trovate -->
+                <label for="found-filter">Mostra Solo Trovate:</label>
+                <input type="checkbox" id="found-filter">
+            </div>
+            <div id="collection-grid" class="collection-grid">
+                <!-- Le carte della collezione saranno caricate dinamicamente -->
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer con Crediti e Social -->
+    <footer>
+        <p>Creato da [Il Tuo Nome]. Condividi il tuo progresso:</p>
+        <div class="social-buttons">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="collection.js"></script>
+</body>
+</html>
