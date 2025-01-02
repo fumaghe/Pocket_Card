@@ -1,0 +1,141 @@
+<!-- deck-builder.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costruttore di Mazzi e Collezione</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importa jsPDF e html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <!-- Pannello Laterale -->
+    <div id="side-panel" class="side-panel">
+        <button id="close-side-panel" class="close-side-panel">&times;</button>
+        <nav class="side-nav">
+            <a href="index.html" class="side-link">Home</a>
+            <a href="collection.html" class="side-link">Collezione</a>
+            <a href="#" class="side-link">Statistiche</a>
+            <a href="#" class="side-link">Pacchetti</a>
+        </nav>
+    </div>
+
+    <button id="open-side-panel" class="open-side-panel">&#9776;</button>
+
+    <!-- Header con Logo e Titolo -->
+    <header>
+        <img src="img/logo.png" alt="Logo Collezione" class="logo">
+        <h1>Costruttore di Mazzi e Collezione</h1>
+    </header>
+
+    <!-- Barra delle Statistiche -->
+    <div class="stats-bar">
+        <p><strong>Packs Aperti:</strong> <span id="packs-opened">0</span></p>
+        <ul>
+            <li>Common: <span id="common-count">0</span></li>
+            <li>Rare: <span id="rare-count">0</span></li>
+            <li>Epic: <span id="epic-count">0</span></li>
+            <li>Legendary: <span id="legendary-count">0</span></li>
+        </ul>
+        <p><strong>Carte Singole:</strong> <span id="unique-cards">0</span> / <span id="total-cards">0</span></p>
+    </div>
+
+    <!-- Sezione Principale del Mazzo e della Collezione -->
+    <main>
+        <!-- Sezione Deck -->
+        <section id="deck-builder" class="deck-builder">
+            <h2>Il tuo Mazzo (12 Carte)</h2>
+            
+            <!-- Input per il titolo del mazzo -->
+            <div class="deck-title">
+                <label for="deck-title-input">Titolo del Mazzo:</label>
+                <input type="text" id="deck-title-input" placeholder="Inserisci il titolo del mazzo">
+            </div>
+            
+            <div class="slots">
+                <!-- 12 slot per il mazzo -->
+                <div class="slot" data-slot="1"></div>
+                <div class="slot" data-slot="2"></div>
+                <div class="slot" data-slot="3"></div>
+                <div class="slot" data-slot="4"></div>
+                <div class="slot" data-slot="5"></div>
+                <div class="slot" data-slot="6"></div>
+                <div class="slot" data-slot="7"></div>
+                <div class="slot" data-slot="8"></div>
+                <div class="slot" data-slot="9"></div>
+                <div class="slot" data-slot="10"></div>
+                <div class="slot" data-slot="11"></div>
+                <div class="slot" data-slot="12"></div>
+            </div>
+            <!-- Aggiunta delle statistiche Mana Medio e Forza Media -->
+            <div class="deck-stats">
+                <p><strong>Mana Medio:</strong> <span id="average-mana">0</span></p>
+                <p><strong>Forza Media:</strong> <span id="average-strength">0</span></p>
+            </div>
+            <!-- Pulsante per scaricare il PDF (nascosto inizialmente) -->
+            <button id="download-pdf-btn" class="download-pdf-btn" disabled>Scarica PDF del Mazzo</button>
+        </section>
+
+        <!-- Sezione Collezione -->
+        <section id="card-pool" class="card-pool">
+            <h2>La tua Collezione</h2>
+            <!-- Sezione Filtri e Ricerca -->
+            <div class="filters-search">
+                <div class="filters">
+                    <label for="rarity-filter">Rarità:</label>
+                    <select id="rarity-filter">
+                        <option value="All">Tutti</option>
+                        <option value="Common">Common</option>
+                        <option value="Rare">Rare</option>
+                        <option value="Epic">Epic</option>
+                        <option value="Legendary">Legendary</option>
+                    </select>
+
+                    <label for="type-filter">Tipo:</label>
+                    <select id="type-filter">
+                        <option value="All">Tutti</option>
+                        <option value="Cibo">Cibo</option>
+                        <option value="Persona">Persona</option>
+                        <option value="Magia">Magia</option>
+                        <option value="Luogo">Luogo</option>
+                        <!-- Aggiungi altri tipi se necessario -->
+                    </select>
+
+                    <!-- Nuovo Selettore di Ordinamento per Mana e Forza -->
+                    <label for="sort-filter">Ordina per:</label>
+                    <select id="sort-filter">
+                        <option value="None">Nessuno</option>
+                        <option value="ManaAsc">Mana Ascendente</option>
+                        <option value="ManaDesc">Mana Discendente</option>
+                        <option value="StrengthAsc">Forza Ascendente</option>
+                        <option value="StrengthDesc">Forza Discendente</option>
+                    </select>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Cerca per Nome o Effetto...">
+                </div>
+            </div>
+            <div id="collection-grid" class="collection-grid">
+                <!-- Carte dinamicamente generate -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con Crediti e Social -->
+    <footer>
+        <p>Creato da [Il Tuo Nome]. Condividi il tuo progresso:</p>
+        <div class="social-buttons">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="deck-builder.js"></script>
+</body>
+</html>

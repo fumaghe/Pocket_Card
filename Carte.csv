@@ -1,0 +1,141 @@
+ID,Nome Carta,Mana,Forza,Effetto 1,Effetto 2,Tipo,Evocata
+1,Nacho D'oro,4,4,Bonus,Evoca,Cibo,No
+2,Nacho Minore,2,2,Nessun Effetto,Nessun Effetto,Cibo,Si
+3,Riccardo Dio Del Caos,6,9,Rievoca,Bonus,Persona,No
+4,Federica Dea Del Farro,5,7,Reset,Bonus,Persona,No
+5,Anselmi Alchimista,2,3,Pesca,Nessun Effetto,Persona,No
+6,Gigante di Farro,6,12,Distrugge,Nessun Effetto,Persona,No
+7,Il Rituale,4,4,Raddoppia,Nessun Effetto,Evento,No
+8,Il Sacrificio,3,5,Distrugge,Sposta,Evento,No
+9,Alchimia,3,2,Aggiungi Turno,Nessun Effetto,Magia,No
+10,Banchetto degli Immortali,-,-,Nessun Effetto,Nessun Effetto,Luogo,No
+11,Monte della disperazione,-,-,Distrugge,Nessun Effetto,Luogo,No
+12,FarroMagia,3,3,Bonus,Nessun Effetto,Magia,No
+13,Fumagalli Eletto,3,4,Bonus,Nessun Effetto,Persona,No
+14,Morbo della maledizione,4,5,Blocco,Nessun Effetto,Magia,No
+15,Nico Protettore stuzzichini,3,2,Bonus,Nessun Effetto,Persona,No
+16,Sissi Protettrice Lasagne,1,1,Sposta,Bonus,Persona,No
+17,Federica del Farro,2,3,Reset,Nessun Effetto,Persona,No
+18,Elena dei Nachos,1,1,Malus,Nessun Effetto,Persona,No
+19,Il caos,3,4,Sposta,Nessun Effetto,Evento,No
+20,Festa del Nachos,-,-,Bonus,Sposta,Luogo,No
+21,Resurrezione,5,0,Bonus,Nessun Effetto,Evento,No
+22,Sara Dea del Giudizio,5,7,Reset,Nessun Effetto,Persona,No
+23,Il capodanno,-,-,Pesca,Nessun Effetto,Luogo,No
+24,Alcolico,0,2,Aggiungi Mana,Nessun Effetto,Cibo,Si
+25,Morte di Riccardo,3,3,Distrugge,Bonus,Evento,No
+26,Morte dei Partecipanti,3,8,Evoca,Distrugge,Evento,No
+27,Il Dolore di fumagalli,2,1,Malus,Bonus,Persona,No
+28,La scia di farro,2,3,Veggenza,Nessun Effetto,Evento,No
+29,Riconcigliazione,3,4,Evoca,Sposta,Evento,No
+30,Rocco,1,2,Protezione,Nessun Effetto,Persona,No
+31,Rocco Spirito Guardiano,5,3,Blocco,Nessun Effetto,Persona,No
+32,Jean Baptiste Anselmi,5,4,Sconto,Nessun Effetto,Persona,No
+33,Jean Baptiste Anselmi Dio Alchimia,6,10,Riattiva,Nessun Effetto,Persona,No
+34,Ludovica la padrona,1,-3,Pesca,Nessun Effetto,Persona,No
+35,Sogno,1,5,Protezione,Nessun Effetto,Evento,Si
+36,Incubo,1,-3,Sposta,Nessun Effetto,Evento,Si
+37,Il farro pesto e pomodorini,1,2,Distrugge,Rievoca,Cibo,No
+38,Ludovica mistica dei sogni,5,7,Sposta,Nessun Effetto,Persona,No
+39,Pietro pescatore del destino,2,3,Pesca,Nessun Effetto,Persona,No
+40,Tonno,1,1,Riattiva,Nessun Effetto,Cibo,Si
+41,Pietro guardiano amuleto,5,7,Veggenza,Pesca,Persona,No
+42,Antonio il napoletano,1,2,Evoca,Nessun Effetto,Persona,No
+43,Pizza Leggendaria,2,3,Nessun Effetto,Nessun Effetto,Cibo,Si
+44,Nico Dio del Cibo,5,6,Bonus,Nessun Effetto,Persona,No
+45,Il tempo,-,-,Malus,Nessun Effetto,Luogo,No
+46,Manu il peruviano,3,4,Distrugge,Nessun Effetto,Persona,No
+47,Manu Guardiano Energie Terrene,4,5,Togli effetto,Nessun Effetto,Persona,No
+48,Manu maestro delle radici,5,8,Blocco,Nessun Effetto,Persona,No
+49,Lapadula,1,3,Pesca,Distrugge,Persona,No
+50,Lapadula Incantatrice delle Erbe,4,5,Evoca,Nessun Effetto,Persona,No
+51,Lauri custode del tempo,5,5,Riattiva,Raddoppia,Persona,No
+52,Lauri ragazza in Orario,3,4,Pesca,Sconto,Persona,No
+53,Cosma Esploratrice delle Stelle,3,4,Bonus,Nessun Effetto,Persona,No
+54,Cosma Astronoma Divina,5,4,Pesca,Bonus,Persona,No
+55,Robi sovrano delle ombre,2,2,Togli effetto,Nessun Effetto,Persona,No
+56,Robi il traditore,4,3,Distrugge,Nessun Effetto,Persona,No
+57,Il tradimento di Robi,4,2,Bonus,Nessun Effetto,Evento,No
+58,Elisa la guaritrice,2,2,Blocco,Nessun Effetto,Persona,No
+59,Rocco lo spirito benevolo,3,2,Mescola,Pesca,Persona,No
+60,Capitano Bianchi,4,7,Sposta,Nessun Effetto,Persona,No
+61,Giulia Oracolo del futuro,2,1,Veggenza,Nessun Effetto,Persona,No
+62,Giulia la veggente,1,2,Pesca,Mescola,Persona,No
+63,Tzhu'Mat sovrano della setta,1,2,Distrugge,Nessun Effetto,Persona,No
+64,Il campo di farro,-,-,Bonus,Nessun Effetto,Luogo,No
+65,Valmare la città,-,-,Malus,Nessun Effetto,Luogo,No
+66,Tzhu'Mat supremo,6,6,Distrugge,Bonus,Persona,No
+67,Cuore di Farro,6,2,Evoca,Malus,Persona,No
+68,Battaglia di Valmare,-,-,Distrugge,Nessun Effetto,Luogo,No
+69,La Rinascita,5,1,Evoca,Bonus,Evento,No
+70,Santuario Segreto,-,-,Coperte,Nessun Effetto,Luogo,No
+71,Sacrificio di Manu,3,5,Distrugge,Aggiungi Mana,Evento,No
+72,Alleanza Divina,3,1,Bonus,Riattiva,Evento,No
+73,Giulia protettrice dei Kola,3,2,Malus,Nessun Effetto,Persona,No
+74,Elena spirito protettivo,2,3,Protezione,Nessun Effetto,Persona,No
+75,La coppia riccardo e federica,5,6,Bonus,Malus,Persona,No
+76,La coppia fumagalli e sara,4,4,Distrugge,Bonus,Persona,No
+77,La coppia anselmi e giulia,6,12,Sposta,Nessun Effetto,Persona,No
+78,L'acqua,3,4,Sposta,Nessun Effetto,Magia,No
+79,Federica la sopravvissuta,2,4,Bonus,Distrugge,Persona,No
+80,Riccardo,3,4,Distrugge,Nessun Effetto,Persona,No
+81,Anselmi custode del sapere alchemico,4,5,Evoca,Nessun Effetto,Persona,No
+82,Fumagalli spirito sacrificato,4,6,Distrugge,Bonus,Persona,No
+83,Sara,2,3,Bonus,Nessun Effetto,Persona,No
+84,Riccardo lo stravagante,3,4,Bonus,Nessun Effetto,Persona,No
+85,La polizia di bianchi,4,4,Malus,Nessun Effetto,Persona,No
+86,La strada verso Valmare,-,-,Pesca,Nessun Effetto,Luogo,No
+87,Le reliquie,6,1,Vittoria,Nessun Effetto,Persona,No
+88,Il Furto Di Tzhu'mal,4,3,Malus,Bonus,Persona,No
+89,La calma prima della tempesta,-,-,Bonus,Nessun Effetto,Luogo,No
+90,La rovina,-,-,Aggiungi Mana,Nessun Effetto,Luogo,No
+91,I seguaci di Tzhu'mal,2,3,Cambio Luogo,Nessun Effetto,Persona,No
+92,La protezione del gigante di farro,5,8,Protezione,Nessun Effetto,Persone,No
+93,Astronomia,-,-,Bonus,Nessun Effetto,Luogo,No
+94,Chiaro Veggenza,-,-,Veggenza,Nessun Effetto,Luogo,No
+95,Tzhu'mal Distruttivo,6,10,Distrugge,Malus,Persona,No
+96,Gigante e i fratelli,6,5,Evoca,Nessun Effetto,Persona,No
+97,Tempio di farro,-,-,Raddoppia,Nessun Effetto,Luogo,No
+98,Foresta degli spiriti,-,-,Blocco,Nessun Effetto,Luogo,No
+99,Lago delle profezie,-,-,Raddoppia,Nessun Effetto,Luogo,No
+100,Montagna degli alchimisti,-,-,Aggiungi Mana,Nessun Effetto,Luogo,No
+101,Il Deserto delle Ombre,-,-,Bonus,Sposta,Luogo,No
+102,Elixir di Farro,4,3,Evoca,Bonus,Cibo,No
+103,Spirito di Nacho,1,1,Bonus,Nessun Effetto,Cibo,No
+104,Vortice di Alchimia,3,3,Sposta,Malus,Magia,No
+105,Incantatore di Farro,4,3,Evoca,Mescola,Persona,No
+106,Eroe di Pizza,2,1,Malus,Nessun Effetto,Persona,No
+107,Runa di Farro,2,3,Bonus,Protezione,Cibo,No
+108,Il Guardiano di Valmare,4,6,Blocca,Bonus,Persona,No
+109,Ladro di Farro,1,1,Sposta,Nessun Effetto,Persona,No
+110,Benedizione di Sara,5,10,Malus,Nessun Effetto,Evento,No
+111,Alchimista Supremo,4,2,Inverti,Nessun Effetto,Persona,No
+112,Veggente Astrale,5,8,Veggenza,Nessun Effetto,Persona,No
+113,Festa Celestiale,3,2,Bonus,Nessun Effetto,Evento,No
+114,Stregoneria di Ludovica,5,4,Evoca,Nessun Effetto,Magia,No
+115,Manovra di Cosma,5,7,Cambio Luogo,Nessun Effetto,Magia,No
+116,Anima di Rocco,5,1,Raddoppia,Nessun Effetto,Persona,No
+117,Incantesimo di Lapadula,1,3,Bonus,Nessun Effetto,Magia,No
+118,Furia di Robi,6,8,Distrugge,Cambia Luogo,Evento,No
+119,Benedizione di Manudi Robi,4,5,Bonus,Nessun Effetto,Evento,No
+120,Protezione di Sissi,3,4,Blocco,Nessun Effetto,Magia,No
+121,Sacrificio di Sara,5,0,Distrugge,Bonus,Evento,No
+122,Incantesimo di Lauri,4,3,Sposta,Bonus,Magia,No
+123,Rivoluzione di Tzhu'mal,5,7,Bonus,Nessun Effetto,Evento,No
+124,Magia di Anselmi,1,2,Sconto,Nessun Effetto,Magia,No
+125,Banchetto di Fumagalli,4,6,Bonus,Nessun Effetto,Evento,No
+126,Volo di Lapadula,4,5,Sposta,Nessun Effetto,Magia,No
+127,Servitore Oscuro,3,4,Bonus,Nessun Effetto,Persona,No
+128,Ragnatela di Robi,3,3,Malus,Blocco,Persona,No
+129,Le Reliquie di Valmare,5,4,Bonus,Nessun Effetto,Persona,No
+130,Alleato di Anselmi,1,1,Sconto,Nessun Effetto,Persona,No
+131,Alleanza di Sissi e Nico,2,3,Bonus,Nessun Effetto,Persona,No
+132,Spada di Federica,2,2,Malus,Nessun Effetto,Persona,No
+133,Anello di Anselmi,4,3,Raddoppia,Nessun Effetto,Persona,No
+134,Alchimia Avanzata,3,5,Sconto,Pesca,Magia,No
+135,Alchimia Oscura,2,2,Reset,Nessun Effetto,Magia,No
+136,La Resilienza di Manu,8,12,Sconto,Distrugge,Evento,No
+137,L'Amore Riccardo e Federica,4,3,Sposta,Bonus,Persona,No
+138,Dominio di Elisa,2,1,Bonus,Nessun Effetto,Evento,No
+139,Assalto di Tzhu'mal,6,12,Bonus,Nessun Effetto,Evento,No
+140,Magia di Valmare,-,-,Raddoppia,Nessun Effetto,Luogo,No

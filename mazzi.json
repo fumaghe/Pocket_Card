@@ -1,0 +1,490 @@
+{
+    "Malus": [
+        {
+            "ID": 104,
+            "Nome Carta": "Vortice di Alchimia",
+            "Mana": 3.0,
+            "Forza": "3",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Malus",
+            "Tipo": "Magia",
+            "Evocata": "No"
+        },
+        {
+            "ID": 27,
+            "Nome Carta": "Il Dolore di fumagalli",
+            "Mana": 2.0,
+            "Forza": "1",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 67,
+            "Nome Carta": "Cuore di Farro",
+            "Mana": 6.0,
+            "Forza": "2",
+            "Effetto 1": "Evoca",
+            "Effetto 2": "Malus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 18,
+            "Nome Carta": "Elena dei Nachos",
+            "Mana": 1.0,
+            "Forza": "1",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 75,
+            "Nome Carta": "La coppia riccardo e federica",
+            "Mana": 5.0,
+            "Forza": "6",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Malus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 106,
+            "Nome Carta": "Eroe di Pizza",
+            "Mana": 2.0,
+            "Forza": "1",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 85,
+            "Nome Carta": "La polizia di bianchi",
+            "Mana": 4.0,
+            "Forza": "4",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 88,
+            "Nome Carta": "Il Furto Di Tzhu'mal",
+            "Mana": 4.0,
+            "Forza": "3",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 128,
+            "Nome Carta": "Ragnatela di Robi",
+            "Mana": 3.0,
+            "Forza": "3",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Blocco",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 73,
+            "Nome Carta": "Giulia protettrice dei Kola",
+            "Mana": 3.0,
+            "Forza": "2",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 95,
+            "Nome Carta": "Tzhu'mal Distruttivo",
+            "Mana": 6.0,
+            "Forza": "10",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Malus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 110,
+            "Nome Carta": "Benedizione di Sara",
+            "Mana": 5.0,
+            "Forza": "10",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        }
+    ],
+    "Distrugge": [
+        {
+            "ID": 76,
+            "Nome Carta": "La coppia fumagalli e sara",
+            "Mana": 4.0,
+            "Forza": "4",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 71,
+            "Nome Carta": "Sacrificio di Manu",
+            "Mana": 3.0,
+            "Forza": "5",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Aggiungi Mana",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 37,
+            "Nome Carta": "Il farro pesto e pomodorini",
+            "Mana": 1.0,
+            "Forza": "2",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Rievoca",
+            "Tipo": "Cibo",
+            "Evocata": "No"
+        },
+        {
+            "ID": 66,
+            "Nome Carta": "Tzhu'Mat supremo",
+            "Mana": 6.0,
+            "Forza": "6",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 136,
+            "Nome Carta": "La Resilienza di Manu",
+            "Mana": 8.0,
+            "Forza": "12",
+            "Effetto 1": "Sconto",
+            "Effetto 2": "Distrugge",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 8,
+            "Nome Carta": "Il Sacrificio",
+            "Mana": 3.0,
+            "Forza": "5",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Sposta",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 49,
+            "Nome Carta": "Lapadula",
+            "Mana": 1.0,
+            "Forza": "3",
+            "Effetto 1": "Pesca",
+            "Effetto 2": "Distrugge",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 80,
+            "Nome Carta": "Riccardo",
+            "Mana": 3.0,
+            "Forza": "4",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 82,
+            "Nome Carta": "Fumagalli spirito sacrificato",
+            "Mana": 4.0,
+            "Forza": "6",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 26,
+            "Nome Carta": "Morte dei Partecipanti",
+            "Mana": 3.0,
+            "Forza": "8",
+            "Effetto 1": "Evoca",
+            "Effetto 2": "Distrugge",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 46,
+            "Nome Carta": "Manu il peruviano",
+            "Mana": 3.0,
+            "Forza": "4",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 6,
+            "Nome Carta": "Gigante di Farro",
+            "Mana": 6.0,
+            "Forza": "12",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        }
+    ],
+    "Sposta": [
+        {
+            "ID": 77,
+            "Nome Carta": "La coppia anselmi e giulia",
+            "Mana": 6.0,
+            "Forza": "12",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 78,
+            "Nome Carta": "L'acqua",
+            "Mana": 3.0,
+            "Forza": "4",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Magia",
+            "Evocata": "No"
+        },
+        {
+            "ID": 104,
+            "Nome Carta": "Vortice di Alchimia",
+            "Mana": 3.0,
+            "Forza": "3",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Malus",
+            "Tipo": "Magia",
+            "Evocata": "No"
+        },
+        {
+            "ID": 19,
+            "Nome Carta": "Il caos",
+            "Mana": 3.0,
+            "Forza": "4",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 109,
+            "Nome Carta": "Ladro di Farro",
+            "Mana": 1.0,
+            "Forza": "1",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 29,
+            "Nome Carta": "Riconcigliazione",
+            "Mana": 3.0,
+            "Forza": "4",
+            "Effetto 1": "Evoca",
+            "Effetto 2": "Sposta",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 126,
+            "Nome Carta": "Volo di Lapadula",
+            "Mana": 4.0,
+            "Forza": "5",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Magia",
+            "Evocata": "No"
+        },
+        {
+            "ID": 8,
+            "Nome Carta": "Il Sacrificio",
+            "Mana": 3.0,
+            "Forza": "5",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Sposta",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 36,
+            "Nome Carta": "Incubo",
+            "Mana": 1.0,
+            "Forza": "-3",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Evento",
+            "Evocata": "Si"
+        },
+        {
+            "ID": 60,
+            "Nome Carta": "Capitano Bianchi",
+            "Mana": 4.0,
+            "Forza": "7",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 122,
+            "Nome Carta": "Incantesimo di Lauri",
+            "Mana": 4.0,
+            "Forza": "3",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Bonus",
+            "Tipo": "Magia",
+            "Evocata": "No"
+        },
+        {
+            "ID": 16,
+            "Nome Carta": "Sissi Protettrice Lasagne",
+            "Mana": 1.0,
+            "Forza": "1",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        }
+    ],
+    "Bonus": [
+        {
+            "ID": 131,
+            "Nome Carta": "Alleanza di Sissi e Nico",
+            "Mana": 2.0,
+            "Forza": "3",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 44,
+            "Nome Carta": "Nico Dio del Cibo",
+            "Mana": 5.0,
+            "Forza": "6",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 53,
+            "Nome Carta": "Cosma Esploratrice delle Stelle",
+            "Mana": 3.0,
+            "Forza": "4",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 3,
+            "Nome Carta": "Riccardo Dio Del Caos",
+            "Mana": 6.0,
+            "Forza": "9",
+            "Effetto 1": "Rievoca",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 137,
+            "Nome Carta": "L'Amore Riccardo e Federica",
+            "Mana": 4.0,
+            "Forza": "3",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 16,
+            "Nome Carta": "Sissi Protettrice Lasagne",
+            "Mana": 1.0,
+            "Forza": "1",
+            "Effetto 1": "Sposta",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 25,
+            "Nome Carta": "Morte di Riccardo",
+            "Mana": 3.0,
+            "Forza": "3",
+            "Effetto 1": "Distrugge",
+            "Effetto 2": "Bonus",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 1,
+            "Nome Carta": "Nacho D'oro",
+            "Mana": 4.0,
+            "Forza": "4",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Evoca",
+            "Tipo": "Cibo",
+            "Evocata": "No"
+        },
+        {
+            "ID": 21,
+            "Nome Carta": "Resurrezione",
+            "Mana": 5.0,
+            "Forza": "0",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Evento",
+            "Evocata": "No"
+        },
+        {
+            "ID": 12,
+            "Nome Carta": "FarroMagia",
+            "Mana": 3.0,
+            "Forza": "3",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Nessun Effetto",
+            "Tipo": "Magia",
+            "Evocata": "No"
+        },
+        {
+            "ID": 27,
+            "Nome Carta": "Il Dolore di fumagalli",
+            "Mana": 2.0,
+            "Forza": "1",
+            "Effetto 1": "Malus",
+            "Effetto 2": "Bonus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        },
+        {
+            "ID": 75,
+            "Nome Carta": "La coppia riccardo e federica",
+            "Mana": 5.0,
+            "Forza": "6",
+            "Effetto 1": "Bonus",
+            "Effetto 2": "Malus",
+            "Tipo": "Persona",
+            "Evocata": "No"
+        }
+    ]
+}
